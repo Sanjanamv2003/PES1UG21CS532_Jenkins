@@ -10,7 +10,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'g++ main.cpp -o output'
+                sh 'mvn clean install'
+                echo 'Build Stage Successful'
             }
         }
         stage('Test') {
